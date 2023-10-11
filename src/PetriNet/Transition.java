@@ -27,12 +27,7 @@ public class Transition {
 	}
 	
 	public void removeEdgeFromPlace(Place place) {
-		for (Edge edge:this.edges) {
-			if (edge.getPlace()==place) {
-				this.edges.remove(edge);
-				return;
-			}
-		}
+		this.edges.removeIf(edge -> (edge.getPlace() == place));
 	}
 
 }

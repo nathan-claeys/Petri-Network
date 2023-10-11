@@ -5,7 +5,6 @@ import java.util.List;
 
 public class PetriNet implements PetriNetwork {
 
-	private List<Edge> listEdges;
 	private List<Transition> listTransitions;
 	private List<Place> listPlaces;
 	
@@ -59,10 +58,7 @@ public class PetriNet implements PetriNetwork {
 	@Override
 	public void remove(Place place) {
 		this.listPlaces.remove(place);
-		for (Transition transition : this.listTransitions) {
-			this.remove(place, transition);
-		}
-		
+		this.listTransitions.forEach(transition -> this.remove(place, transition));
 	}
 
 	@Override
