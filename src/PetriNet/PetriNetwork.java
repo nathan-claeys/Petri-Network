@@ -8,7 +8,7 @@ public interface PetriNetwork {
 	
 	public void add(Transition transition);
 	
-	public void add(Place place, Transition transition, int weight);
+	public void add(Place place, Transition transition, int weight, EdgeType type);
 	
 	public void remove(Place place);
 	

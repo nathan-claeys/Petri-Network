@@ -13,7 +13,7 @@ public class Transition {
 		boolean triggerable = true;
 		for (Edge edge : this.edges) {
 			if (edge instanceof EdgeOut) {
-				triggerable &= (((EdgeOut)edge).isTriggeable());
+				triggerable &= (((EdgeOut)edge).isTriggerable());
 			}
 		}
 		if (triggerable) {

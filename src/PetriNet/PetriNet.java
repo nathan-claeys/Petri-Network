@@ -34,7 +34,7 @@ public class PetriNet implements PetriNetwork {
 	}
 
 	@Override
-	public void add(Place place, Transition transition, int weight) {
+	public void add(Place place, Transition transition, int weight, EdgeType type) {
 		this.listEdges.add(new Edge(place, transition, weight));
 		
 	}
