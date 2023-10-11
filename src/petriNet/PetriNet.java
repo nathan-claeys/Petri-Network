@@ -44,11 +44,11 @@ public class PetriNet implements PetriNetwork {
 			break;
 
 		case ZERO:
-			edge = new EdgeZero(weight, place);
+			edge = new EdgeZero(place);
 			break;
 			
 		case EMPTY:
-			edge = new EdgeEmpty(weight, place);
+			edge = new EdgeEmpty(place);
 			break;			
 		}
 		
