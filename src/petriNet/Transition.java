@@ -1,5 +1,6 @@
 package petriNet;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Transition {
@@ -7,6 +8,10 @@ public class Transition {
 
 	public Transition(List<Edge> edges) {
 		this.edges = edges;
+	}
+	
+	public Transition() {
+		this(new LinkedList<Edge>());
 	}
 	
 	public void fire() {
