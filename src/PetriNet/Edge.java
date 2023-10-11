@@ -11,4 +11,6 @@ public interface Edge {
 	 */
 	void trigger();
 
+	public void trigger();
+
 }
