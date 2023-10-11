@@ -72,7 +72,7 @@ public class PetriNet implements PetriNetwork {
 	}
 
 	public String toString() {
-		String result = String.format("Nombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", this.listTransitions.size(), this.listPlaces.size());
+		String result = String.format("RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", this.listTransitions.size(), this.listPlaces.size());
 		int index = 1;
 		for (Place place : listPlaces) {
 			result += String.format("Place %d : %d cailloux\n", index++, place.count());
@@ -84,9 +84,10 @@ public class PetriNet implements PetriNetwork {
 			
 			int edgeindex = 1;
 			for (Edge edge : transition.getEdges()) {
-				result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", edgeindex++, edge.getWeight(), edge.getClass().getName(), this.listPlaces.indexOf(edge.getPlace()));
+				result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", edgeindex++, edge.getWeight(), edge.getClass().getName(), this.listPlaces.indexOf(edge.getPlace())+1);
 			}
 		}
+		result += "FIN DU RAPPORT\n----------------------------------------------\n";
 		return result;
 	}
 	
