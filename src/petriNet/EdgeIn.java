@@ -1,4 +1,4 @@
-package PetriNet;
+package petriNet;
 
 /**
  * @author natha

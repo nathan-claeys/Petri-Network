@@ -1,4 +1,4 @@
-package PetriNet;
+package petriNet;
 
 import java.util.List;
 
