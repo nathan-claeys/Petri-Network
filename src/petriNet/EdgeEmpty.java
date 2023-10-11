@@ -6,8 +6,8 @@ package petriNet;
  */
 public class EdgeEmpty extends EdgeOut {
 
-	public EdgeEmpty(int weight, Place place) {
-		super(weight, place);
+	public EdgeEmpty(Place place) {
+		super(0, place);
 	}
 	
 	/**
