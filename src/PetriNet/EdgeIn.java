@@ -23,4 +23,9 @@ public class EdgeIn implements Edge {
 		this.place.add(this.weight);		
 	}
 
+	@Override
+	public Place getPlace() {
+		return this.place;
+	}
+
 }

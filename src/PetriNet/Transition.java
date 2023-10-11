@@ -26,8 +26,13 @@ public class Transition {
 		this.edges.add(edge);
 	}
 	
-	public void removeEdge(Edge edge) {
-		this.edges.remove(edge);
+	public void removeEdgeFromPlace(Place place) {
+		for (Edge edge:this.edges) {
+			if (edge.getPlace()==place) {
+				this.edges.remove(edge);
+				return;
+			}
+		}
 	}
 
 }
