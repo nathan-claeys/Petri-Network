@@ -59,13 +59,15 @@ public class PetriNet implements PetriNetwork {
 	@Override
 	public void remove(Place place) {
 		this.listPlaces.remove(place);
+		for (Transition transition : this.listTransitions) {
+			this.remove(place, transition);
+		}
 		
 	}
 
 	@Override
 	public void remove(Transition transition) {
 		this.listTransitions.remove(transition);
-		
 	}
 
 	@Override
