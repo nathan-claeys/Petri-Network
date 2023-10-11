@@ -35,7 +35,27 @@ public class PetriNet implements PetriNetwork {
 
 	@Override
 	public void add(Place place, Transition transition, int weight, EdgeType type) {
-		this.listEdges.add(new Edge(place, transition, weight));
+		Edge edge = null;
+		switch (type) {
+		case IN:
+			edge = new EdgeIn(weight, place);
+			break;
+
+		case OUT:
+			edge = new EdgeOut(weight, place);
+			break;
+
+		case ZERO:
+			edge = new EdgeZero(weight, place);
+			break;
+			
+		case EMPTY:
+			edge = new EdgeEmpty(weight, place);
+			break;			
+		}
+		
+		transition.addEdge(edge);
+		this.listEdges.add(edge);
 		
 	}
 
