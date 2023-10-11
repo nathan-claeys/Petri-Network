@@ -14,6 +14,14 @@ public class EdgeOut implements Edge {
 		this.place = place;
 	}
 	
+	public int getWeight() {
+		return weight;
+	}
+
+	public Place getPlace() {
+		return place;
+	}
+
 	/**
 	 * this method will be used by the transition to know if the 
 	 * edge is triggerable.

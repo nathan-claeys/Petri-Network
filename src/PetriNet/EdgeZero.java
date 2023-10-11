@@ -15,7 +15,7 @@ public class EdgeZero extends EdgeOut {
 	 *@return place.isEmpty()
 	 */
 	public boolean isTriggerable() {
-		return this.place.isEmpty();
+		return super.getPlace().isEmpty();
 	}
 	
 	/**

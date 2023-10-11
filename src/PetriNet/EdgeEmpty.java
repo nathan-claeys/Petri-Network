@@ -11,10 +11,17 @@ public class EdgeEmpty extends EdgeOut {
 	}
 	
 	/**
-	 *
+	 *This edge is only triggerable when not empty
 	 */
 	public boolean isTriggerable() {
-		return (!this.place.isEmpty());
+		return (!super.getPlace().isEmpty());
+	}
+	
+	/**
+	 *remove all tokens from the place
+	 */
+	public void trigger() {
+		super.getPlace().remove(super.getPlace().count());
 	}
 
 }
