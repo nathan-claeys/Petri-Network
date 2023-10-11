@@ -71,8 +71,23 @@ public class PetriNet implements PetriNetwork {
 		transition.removeEdgeFromPlace(place);
 	}
 
-	public List<Place> getListPlaces() {
-		return listPlaces;
+	public String toString() {
+		String result = String.format("Nombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", this.listTransitions.size(), this.listPlaces.size());
+		int index = 1;
+		for (Place place : listPlaces) {
+			result += String.format("Place %d : %d cailloux\n", index++, place.count());
+		}
+		result += "=====================\nEtat des arcs :\n";
+		index = 1;
+		for (Transition transition : listTransitions) {
+			result += String.format("  Arcs de la transition %d\n", index++);
+			
+			int edgeindex = 1;
+			for (Edge edge : transition.getEdges()) {
+				result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", edgeindex++, edge.getWeight(), edge.getClass().getName(), this.listPlaces.indexOf(edge.getPlace()));
+			}
+		}
+		return result;
 	}
 	
 }

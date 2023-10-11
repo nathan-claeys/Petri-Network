@@ -28,4 +28,8 @@ public class EdgeIn implements Edge {
 		return this.place;
 	}
 
+	public int getWeight() {
+		return weight;
+	}
+
 }

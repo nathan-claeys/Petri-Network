@@ -26,7 +26,8 @@ public class TestNetworkSimple {
 		
 		petri.triggerTransition(transi);
 		
-		petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		//petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		System.out.println(petri);
 	}
 
 }

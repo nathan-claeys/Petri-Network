@@ -12,5 +12,7 @@ public interface Edge {
 	void trigger();
 
 	Place getPlace();
+	
+	int getWeight();
 
 }

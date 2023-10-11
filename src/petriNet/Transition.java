@@ -35,4 +35,9 @@ public class Transition {
 		this.edges.removeIf(edge -> (edge.getPlace() == place));
 	}
 
+	public List<Edge> getEdges() {
+		return edges;
+	}
+	
+
 }
