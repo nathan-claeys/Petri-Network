@@ -71,4 +71,8 @@ public class PetriNet implements PetriNetwork {
 		transition.removeEdgeFromPlace(place);
 	}
 
+	public List<Place> getListPlaces() {
+		return listPlaces;
+	}
+	
 }
