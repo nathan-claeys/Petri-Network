@@ -43,7 +43,8 @@ public class TestNetworkSimple {
 		
 		petri.triggerTransition(transi);
 		
-		petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		//petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+				System.out.println(petri);
 	}
 	public static void test3() {
 		PetriNet petri = new PetriNet();
@@ -58,7 +59,8 @@ public class TestNetworkSimple {
 		
 		petri.triggerTransition(transi);
 		
-		petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		//petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+				System.out.println(petri);
 	}
 	public static void test4() {
 		PetriNet petri = new PetriNet();
@@ -73,7 +75,8 @@ public class TestNetworkSimple {
 		
 		petri.triggerTransition(transi);
 		
-		petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		//petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+				System.out.println(petri);
 	}
 	
 	public static void test5() {
@@ -89,7 +92,8 @@ public class TestNetworkSimple {
 		
 		petri.triggerTransition(transi);
 		
-		petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		//petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+				System.out.println(petri);
 	}
 	public static void test6() {
 		PetriNet petri = new PetriNet();
@@ -104,7 +108,8 @@ public class TestNetworkSimple {
 		
 		petri.triggerTransition(transi);
 		
-		petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+		//petri.getListPlaces().forEach(place -> System.out.println(place.count()));
+				System.out.println(petri);
 	}
 	
 	public static void main(String[] args) {
