@@ -10,7 +10,6 @@ public class PetriNet implements PetriNetwork {
 	private List<Place> listPlaces;
 	
 	public PetriNet() {
-		this.listEdges = new LinkedList<Edge>();
 		this.listTransitions = new LinkedList<Transition>();
 		this.listPlaces = new LinkedList<Place>();
 	}
@@ -54,9 +53,7 @@ public class PetriNet implements PetriNetwork {
 			break;			
 		}
 		
-		transition.addEdge(edge);
-		this.listEdges.add(edge);
-		
+		transition.addEdge(edge);		
 	}
 
 	@Override
@@ -73,7 +70,7 @@ public class PetriNet implements PetriNetwork {
 
 	@Override
 	public void remove(Place place, Transition transition) {
-		this.listEdges.remove(new Edge(place, transition, 0));
+		transition.removeEdgeFromPlace(place);
 	}
 
 }
