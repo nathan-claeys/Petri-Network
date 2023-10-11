@@ -22,5 +22,8 @@ public class Transition {
 			}
 		}
 	}
+	public void addEdge(Edge edge) {
+		this.edges.add(edge);
+	}
 
 }
