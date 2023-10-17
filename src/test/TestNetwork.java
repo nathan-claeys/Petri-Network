@@ -8,7 +8,7 @@ import petriNet.PetriNet;
 import petriNet.Place;
 import petriNet.Transition;
 
-public class TestNetworkSimple {
+public class TestNetwork {
 	
 	public static void test1() {
 		PetriNet petri = new PetriNet();

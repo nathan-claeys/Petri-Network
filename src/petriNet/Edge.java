@@ -1,10 +1,9 @@
 package petriNet;
 
 
-/**
- * @author natha
- *This is an abstract Class to describe the theoretical shape of an edge : a weight and a place associated 
- *a trigger method and some getters 
+/** This is an abstract Class to describe the theoretical shape of an edge : a weight and a place associated 
+ * a trigger method and some getters 
+ * @author Claeys
  */
 public abstract class Edge {
 	private int weight;
