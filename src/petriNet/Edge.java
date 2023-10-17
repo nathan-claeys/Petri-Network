@@ -11,8 +11,11 @@ public abstract class Edge {
 	private Place place;
 	
 		
+	/** Building an edge linked to a place
+	 * @param weight
+	 * @param place Place to link
+	 */
 	public Edge(int weight, Place place) {
-		super();
 		this.weight = weight;
 		this.place = place;
 	}
