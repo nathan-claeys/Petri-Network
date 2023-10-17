@@ -5,8 +5,6 @@ package petriNet;
  *
  */
 public class EdgeOut extends Edge {
-	private int weight;
-	private Place place;
 
 	/** OUT edge creation from linked place and weight
 	 * @param weight
@@ -21,14 +19,14 @@ public class EdgeOut extends Edge {
 	 */
 	public boolean isTriggerable() {
 		
-		return (this.place.count()>=this.weight);
+		return (super.place.count()>=super.weight);
 	}
 
 	/** Trigger the edge, removing the weight of the edge from place's tokens
 	 */
 	@Override
 	public void trigger() {
-		this.place.remove(this.weight);
+		super.place.remove(super.weight);
 		
 	}
 	

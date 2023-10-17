@@ -6,8 +6,8 @@ package petriNet;
  * @author Claeys
  */
 public abstract class Edge {
-	private int weight;
-	private Place place;
+	protected int weight;
+	protected Place place;
 	
 		
 	/** Building an edge linked to a place

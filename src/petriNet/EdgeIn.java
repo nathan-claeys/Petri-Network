@@ -6,8 +6,6 @@ package petriNet;
  * 
  */
 public class EdgeIn extends Edge {
-	private int weight;
-	private Place place;
 
 	/** IN edge creation from linked place and weight
 	 * @param weight
@@ -22,6 +20,6 @@ public class EdgeIn extends Edge {
 	 */
 	@Override
 	public void trigger() {
-		this.place.add(this.weight);		
+		super.place.add(super.weight);		
 	}
 }
