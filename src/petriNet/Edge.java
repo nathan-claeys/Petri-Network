@@ -1,8 +1,10 @@
 package petriNet;
 
-/** An abstract class to represent every type of edges
- * @author Claeys
- * 
+
+/**
+ * @author natha
+ *This is an abstract Class to describe the theoretical shape of an edge : a weight and a place associated 
+ *a trigger method and some getters 
  */
 public abstract class Edge {
 	private int weight;
@@ -22,13 +24,25 @@ public abstract class Edge {
 	 * This method will be used to trigger every edge from the transition associated
 	 */
 	abstract void trigger();
+	
 
+	/**
+	 * This method return the associated place, it is used to find the right edge to delete from
+	 * the petriNet class
+	 * @return Place
+	 */
 	Place getPlace() {
 		return this.place;
 	};
 	
+	
+	
+	/**
+	 * Return the weight of the edge, is used in petriNet toString method
+	 * @return weight
+	 */
 	int getWeight() {
 		return this.weight;
-	};
+	}
 
 }
