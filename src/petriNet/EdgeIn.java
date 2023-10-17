@@ -4,14 +4,12 @@ package petriNet;
  * @author natha
  *
  */
-public class EdgeIn implements Edge {
+public class EdgeIn extends Edge {
 	private int weight;
 	private Place place;
 
 	public EdgeIn(int weight, Place place) {
-		super();
-		this.weight = weight;
-		this.place = place;
+		super(weight,place);
 	}
 
 	/**
@@ -21,15 +19,6 @@ public class EdgeIn implements Edge {
 	@Override
 	public void trigger() {
 		this.place.add(this.weight);		
-	}
-
-	@Override
-	public Place getPlace() {
-		return this.place;
-	}
-
-	public int getWeight() {
-		return weight;
 	}
 
 }

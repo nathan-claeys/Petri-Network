@@ -4,22 +4,12 @@ package petriNet;
  * @author natha
  *
  */
-public class EdgeOut implements Edge {
+public class EdgeOut extends Edge {
 	private int weight;
 	private Place place;
 
 	public EdgeOut(int weight, Place place) {
-		super();
-		this.weight = weight;
-		this.place = place;
-	}
-	
-	public int getWeight() {
-		return weight;
-	}
-
-	public Place getPlace() {
-		return place;
+		super(weight,place);
 	}
 
 	/**
