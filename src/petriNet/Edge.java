@@ -1,16 +1,19 @@
 package petriNet;
 
-/**
- * @author natha
- *An interface to represent every type of edges 
+/** An abstract class to represent every type of edges
+ * @author Claeys
+ * 
  */
 public abstract class Edge {
 	private int weight;
 	private Place place;
 	
 		
+	/** Building an edge linked to a place
+	 * @param weight
+	 * @param place Place to link
+	 */
 	public Edge(int weight, Place place) {
-		super();
 		this.weight = weight;
 		this.place = place;
 	}

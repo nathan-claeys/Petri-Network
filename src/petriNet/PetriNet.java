@@ -3,6 +3,10 @@ package petriNet;
 import java.util.LinkedList;
 import java.util.List;
 
+/** An implementation of a Petri network
+ * @author Cheucle
+ *
+ */
 public class PetriNet implements PetriNetwork {
 
 	private List<Transition> listTransitions;
@@ -71,6 +75,9 @@ public class PetriNet implements PetriNetwork {
 		transition.removeEdgeFromPlace(place);
 	}
 
+	/** Show the current state of the network. Print the details of transitions (source, target, weight) and places (current token count)
+	 *
+	 */
 	public String toString() {
 		String result = String.format("RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", this.listTransitions.size(), this.listPlaces.size());
 		int index = 1;
