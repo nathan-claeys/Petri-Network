@@ -1,26 +1,26 @@
 package petriNet;
 
-/**
- * @author natha
+/** Reprensents a specific OUT edge, only activated if the linked place is empty
+ * @author Claeys
  *
  */
 public class EdgeZero extends EdgeOut {
 
+	/** ZERO edge creation from the place. Doesn't have a weight
+	 * @param place
+	 */
 	public EdgeZero(Place place) {
 		super(0, place);
 	}
 	
-	/**
-	 *This edge is triggerable when the place is empty
-	 *@return place.isEmpty()
+	/** Returns if the edge is triggerable.
+	 * This edge is only triggerable when not empty
 	 */
 	public boolean isTriggerable() {
 		return super.getPlace().isEmpty();
 	}
 	
-	/**
-	 *this function has no utility, we cannot remove token 
-	 *from an empty place
+	/** Trigger the edge. Do nothing.
 	 */
 	public void trigger() {
 	}
