@@ -31,7 +31,7 @@ public abstract class Edge {
 	 * the petriNet class
 	 * @return Place
 	 */
-	Place getPlace() {
+	public Place getPlace() {
 		return this.place;
 	};
 	
@@ -41,7 +41,7 @@ public abstract class Edge {
 	 * Return the weight of the edge, is used in petriNet toString method
 	 * @return weight
 	 */
-	int getWeight() {
+	public int getWeight() {
 		return this.weight;
 	}
 
