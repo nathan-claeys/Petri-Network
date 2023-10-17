@@ -1,10 +1,12 @@
 package test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
 import petriNet.EdgeIn;
+import petriNet.EdgeOut;
 import petriNet.Place;
 
 public class EdgeTest {
@@ -23,5 +25,14 @@ public class EdgeTest {
 		int w = edge.getWeight();
 		assertEquals(w,3);
 		
+	}
+	@Test
+	public void testIsTriggerable() {
+		Place place = new Place (4);
+		EdgeOut edge = new EdgeOut(2,place);
+		System.out.println("a");
+		System.out.println(place.count()>=edge.getWeight());
+		boolean res = edge.isTriggerable();
+		assertTrue(res);	
 	}
 }
