@@ -82,7 +82,7 @@ public class PetriNet implements PetriNetwork {
 		String result = String.format("RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", this.listTransitions.size(), this.listPlaces.size());
 		int index = 1;
 		for (Place place : listPlaces) {
-			result += String.format("Place %d : %d cailloux\n", index++, place.count());
+			result += String.format("Place %d : %d cailloux\n", index++, place.getCountTokens());
 		}
 		result += "=====================\nEtat des arcs :\n";
 		index = 1;

@@ -1,12 +1,14 @@
 package petriNet;
 
-/** Reprensents a specific OUT edge, only activated if the linked place is not empty
+/** Represents a specific OUT edge, only activated if the linked place is not empty and removes 
+ * all tokens from it
  * @author Claeys
  *
  */
 public class EdgeEmpty extends EdgeOut {
 
-	/** EMPTY edge creation from the place. Doesn't have a weight
+	/** EMPTY edge creation from the place. Doesn't have a weight because we don't need it to trigger 
+	 * the associated place
 	 * @param place
 	 */
 	public EdgeEmpty(Place place) {
@@ -20,11 +22,11 @@ public class EdgeEmpty extends EdgeOut {
 		return (!super.getPlace().isEmpty());
 	}
 	
-	/** Trigger the edge.
-	 * Remove all tokens from the place
+	/** Triggers the edge.
+	 * Removes all tokens from the place
 	 */
 	public void trigger() {
-		super.getPlace().remove(super.getPlace().count());
+		super.getPlace().remove(super.getPlace().getCountTokens());
 	}
 
 }

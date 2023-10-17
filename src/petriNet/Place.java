@@ -18,7 +18,7 @@ public class Place {
 	/** Count place's tokens
 	 * @return number of current tokens
 	 */
-	public int count() {
+	public int getCountTokens() {
 		return this.countTokens;
 	}
 	

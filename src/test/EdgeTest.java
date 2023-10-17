@@ -30,8 +30,6 @@ public class EdgeTest {
 	public void testIsTriggerable() {
 		Place place = new Place (4);
 		EdgeOut edge = new EdgeOut(2,place);
-		System.out.println("a");
-		System.out.println(place.count()>=edge.getWeight());
 		boolean res = edge.isTriggerable();
 		assertTrue(res);	
 	}

@@ -14,15 +14,15 @@ public class EdgeOut extends Edge {
 		super(weight,place);
 	}
 
-	/** Return if the edge is triggerable, ie if its place has more tokens than the weight
+	/** Returns if the edge is triggerable, ie if its place has more tokens than the weight
 	 * @return is edge triggerable
 	 */
 	public boolean isTriggerable() {
 		
-		return (super.place.count()>=super.weight);
+		return (super.place.getCountTokens()>=super.weight);
 	}
 
-	/** Trigger the edge, removing the weight of the edge from place's tokens
+	/** Triggers the edge, removing the weight of the edge from place's tokens
 	 */
 	@Override
 	public void trigger() {

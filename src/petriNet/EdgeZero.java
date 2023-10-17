@@ -1,6 +1,6 @@
 package petriNet;
 
-/** Reprensents a specific OUT edge, only activated if the linked place is empty
+/** Represents a specific OUT edge, only activated if the linked place is empty
  * @author Claeys
  *
  */
@@ -20,7 +20,7 @@ public class EdgeZero extends EdgeOut {
 		return super.getPlace().isEmpty();
 	}
 	
-	/** Trigger the edge. Do nothing.
+	/** Triggers the edge. Do nothing.
 	 */
 	public void trigger() {
 	}

@@ -20,7 +20,7 @@ public abstract class Edge {
 	}
 
 	/**
-	 * Trigger every edge from the transition associated
+	 * Triggers the edge when a transition wants it 
 	 */
 	abstract void trigger();
 	
