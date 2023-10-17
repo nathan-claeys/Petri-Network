@@ -33,4 +33,12 @@ public class EdgeIn extends Edge {
 		assertEquals(p2,place);
 		
 	}
+	@Test
+	public void testGetWeight() {
+		Place place = null;
+		EdgeIn edge = new EdgeIn(3,place);
+		int w = edge.getWeight();
+		assertEquals(w,3);
+		
+	}
 }
