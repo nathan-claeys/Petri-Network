@@ -6,8 +6,8 @@ package petriNet;
  * @author Claeys
  */
 public abstract class Edge {
-	private int weight;
-	private Place place;
+	protected int weight;
+	protected Place place;
 	
 		
 	/** Building an edge linked to a place
@@ -20,14 +20,13 @@ public abstract class Edge {
 	}
 
 	/**
-	 * This method will be used to trigger every edge from the transition associated
+	 * Trigger every edge from the transition associated
 	 */
 	abstract void trigger();
 	
 
 	/**
-	 * This method return the associated place, it is used to find the right edge to delete from
-	 * the petriNet class
+	 * Return the associated place
 	 * @return Place
 	 */
 	public Place getPlace() {
@@ -37,7 +36,7 @@ public abstract class Edge {
 	
 	
 	/**
-	 * Return the weight of the edge, is used in petriNet toString method
+	 * Return the weight of the edge
 	 * @return weight
 	 */
 	public int getWeight() {

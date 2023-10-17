@@ -1,24 +1,25 @@
 package petriNet;
 
 
-/**
- * @author natha
- *This class represent edge that goes inside a place
+/** Represents edge that goes inside a place
+ * @author Claeys
+ * 
  */
 public class EdgeIn extends Edge {
-	private int weight;
-	private Place place;
 
+	/** IN edge creation from linked place and weight
+	 * @param weight
+	 * @param place
+	 */
 	public EdgeIn(int weight, Place place) {
 		super(weight,place);
 	}
 
 	/**
-	 *Every time the edgeIn is triggered, it will give
-	 *it's associated place it weight in tokens
+	 * Trigger the edge, giving it's associated place its weight in tokens
 	 */
 	@Override
 	public void trigger() {
-		this.place.add(this.weight);		
+		super.place.add(super.weight);		
 	}
 }

@@ -1,8 +1,5 @@
 package test;
 
-import java.util.LinkedList;
-
-import petriNet.Edge;
 import petriNet.EdgeType;
 import petriNet.PetriNet;
 import petriNet.Place;

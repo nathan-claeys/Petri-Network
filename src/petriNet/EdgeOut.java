@@ -1,36 +1,32 @@
 package petriNet;
 
-import org.junit.jupiter.api.Test;
-
-/**
- * @author natha
+/** Reprensents an edge that goes towards the transition
+ * @author Claeys
  *
  */
 public class EdgeOut extends Edge {
-	private int weight;
-	private Place place;
 
+	/** OUT edge creation from linked place and weight
+	 * @param weight
+	 * @param place
+	 */
 	public EdgeOut(int weight, Place place) {
 		super(weight,place);
 	}
 
-	/**
-	 * this method will be used by the transition to know if the 
-	 * edge is triggerable.
-	 * @return place.count()>=weight
+	/** Return if the edge is triggerable, ie if its place has more tokens than the weight
+	 * @return is edge triggerable
 	 */
 	public boolean isTriggerable() {
 		
-		return (this.place.count()>=this.weight);
+		return (super.place.count()>=super.weight);
 	}
 
-	/**
-	 *If this function is used, it means that the associated place
-	 *has the right amount of tokens. So we just remove the weight to the place.
+	/** Trigger the edge, removing the weight of the edge from place's tokens
 	 */
 	@Override
 	public void trigger() {
-		this.place.remove(this.weight);
+		super.place.remove(super.weight);
 		
 	}
 	
