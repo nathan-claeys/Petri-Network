@@ -1,5 +1,7 @@
 package petriNet;
 
+import org.junit.jupiter.api.Test;
+
 /**
  * @author natha
  *
@@ -31,5 +33,6 @@ public class EdgeOut extends Edge {
 		this.place.remove(this.weight);
 		
 	}
+	
 
 }
