@@ -18,7 +18,6 @@ public class EdgeOut extends Edge {
 	 * @return is edge triggerable
 	 */
 	public boolean isTriggerable() {
-		
 		return (super.place.getCountTokens()>=super.weight);
 	}
 
@@ -26,6 +25,7 @@ public class EdgeOut extends Edge {
 	 */
 	@Override
 	public void trigger() {
+		if (this.place.getCountTokens()<this.weight){throw new ExceptionInInitializerError("Not enough tokens in place");}
 		super.place.remove(super.weight);
 		
 	}
