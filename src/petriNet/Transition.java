@@ -25,9 +25,10 @@ public class Transition {
 	}
 	
 	/** Trigger a transition. Will update all linked places
+	 * @throws TransitionNotTriggerableException 
 	 * 
 	 */
-	public void fire() {
+	public void fire() throws TransitionNotTriggerableException {
 		boolean triggerable = true;
 		for (Edge edge : this.edges) {
 			if (edge instanceof EdgeOut) {

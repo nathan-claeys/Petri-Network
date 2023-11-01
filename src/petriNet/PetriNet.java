@@ -18,7 +18,7 @@ public class PetriNet implements PetriNetwork {
 	}
 
 	@Override
-	public void triggerTransition(Transition transition) {
+	public void triggerTransition(Transition transition) throws TransitionNotTriggerableException {
 		transition.fire();
 		
 	}

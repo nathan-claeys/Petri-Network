@@ -8,8 +8,9 @@ public interface PetriNetwork {
 	
 	/** Trigger a transition
 	 * @param transition Transition to trigger
+	 * @throws TransitionNotTriggerableException 
 	 */
-	public void triggerTransition(Transition transition);
+	public void triggerTransition(Transition transition) throws TransitionNotTriggerableException;
 	
 	/** Add a place to the network
 	 * @param place

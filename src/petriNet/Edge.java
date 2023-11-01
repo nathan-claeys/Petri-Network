@@ -21,8 +21,9 @@ public abstract class Edge {
 
 	/**
 	 * Triggers the edge when a transition wants it 
+	 * @throws TransitionNotTriggerableException if the edge is trigger whereas it is not triggerable
 	 */
-	abstract void trigger();
+	abstract void trigger() throws TransitionNotTriggerableException;
 	
 
 	/**

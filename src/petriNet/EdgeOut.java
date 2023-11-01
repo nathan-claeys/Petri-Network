@@ -22,10 +22,13 @@ public class EdgeOut extends Edge {
 	}
 
 	/** Triggers the edge, removing the weight of the edge from place's tokens
+	 * @throws TransitionNotTriggerableException if the edge is trigger whereas it is not triggerable
 	 */
 	@Override
-	public void trigger() {
-		if (this.place.getCountTokens()<this.weight){throw new ExceptionInInitializerError("Not enough tokens in place");}
+	public void trigger() throws TransitionNotTriggerableException {
+		if (!this.isTriggerable()){
+			throw new TransitionNotTriggerableException(super.weight, super.place.getCountTokens());
+		}
 		super.place.remove(super.weight);
 		
 	}
