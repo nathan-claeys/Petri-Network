@@ -39,10 +39,13 @@ public class Transition {
 		boolean triggerable = true;
 		for (Edge edge : this.edges) {
 			if (edge instanceof EdgeOut) {
+				// Remaines true only if all edges are triggerable
+				// Forced cast as EdgeOut as we only check OUT edges for trigger
 				triggerable &= (((EdgeOut) edge).isTriggerable());
 			}
 		}
 		if (triggerable) {
+			// Triggers all edges
 			for (Edge edge : this.edges) {
 				edge.trigger();
 			}
@@ -64,6 +67,7 @@ public class Transition {
 	 * @param place Linked place to remove the edge from
 	 */
 	public void removeEdgeFromPlace(Place place) {
+		// Remove edge from list only if its place is the given parameter
 		this.edges.removeIf(edge -> (edge.getPlace() == place));
 	}
 

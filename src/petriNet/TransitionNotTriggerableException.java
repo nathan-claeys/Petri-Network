@@ -7,6 +7,7 @@ package petriNet;
  * @author cheuc
  *
  */
+@SuppressWarnings("serial")
 public class TransitionNotTriggerableException extends Exception {
 
 	public TransitionNotTriggerableException(int edgeWeight, int placeTokens) {
