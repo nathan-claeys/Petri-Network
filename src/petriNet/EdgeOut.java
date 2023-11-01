@@ -19,6 +19,15 @@ public class EdgeOut extends Edge {
 	}
 
 	/**
+	 * OUT edge creation from linked place and weight. Default weight is 1
+	 * 
+	 * @param place
+	 */
+	public EdgeOut(Place place) {
+		this(1, place);
+	}
+	
+	/**
 	 * Returns if the edge is triggerable, ie if its place has more tokens than the
 	 * weight
 	 * 

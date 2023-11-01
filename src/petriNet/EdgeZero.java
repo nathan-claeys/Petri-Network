@@ -14,7 +14,7 @@ public class EdgeZero extends EdgeOut {
 	 * @param place
 	 */
 	public EdgeZero(Place place) {
-		super(0, place);
+		super(place);
 	}
 
 	/**

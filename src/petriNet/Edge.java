@@ -19,11 +19,20 @@ public abstract class Edge {
 	 * @param place  Place to link
 	 */
 	public Edge(int weight, Place place) {
-		if (weight < 0) {
+		if (weight <= 0) {
 			throw new InvalidParameterException("Edge weight must be positive");
 		}
 		this.weight = weight;
 		this.place = place;
+	}
+	
+	/**
+	 * Building an edge linked to a place. Weight is 1 by default.
+	 * 
+	 * @param place  Place to link
+	 */
+	public Edge(Place place) {
+		this(1, place);
 	}
 
 	/**
