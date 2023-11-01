@@ -22,7 +22,7 @@ public abstract class Edge {
 	}
 
 	/**
-	 * Triggers the edge when a transition wants it
+	 * Triggers the edge
 	 * 
 	 * @throws TransitionNotTriggerableException if the edge is trigger whereas it
 	 *                                           is not triggerable
