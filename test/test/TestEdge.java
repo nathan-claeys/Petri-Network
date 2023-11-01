@@ -13,7 +13,6 @@ import petriNet.EdgeOut;
 import petriNet.EdgeType;
 import petriNet.EdgeZero;
 import petriNet.Place;
-import petriNet.Transition;
 
 public class TestEdge {
 	
