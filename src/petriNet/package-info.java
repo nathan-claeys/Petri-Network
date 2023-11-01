@@ -1,5 +1,5 @@
 package petriNet;
 
 /**
-*A package to describe the petri network
-**/
+ * A package to describe the petri network
+ **/

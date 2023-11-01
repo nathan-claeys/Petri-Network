@@ -1,19 +1,22 @@
 package petriNet;
 
-
-/** Represents edge that goes inside a place. It will add its weight in tokens 
- * to the place associated
+/**
+ * Represents edge that goes inside a place. It will add its weight in tokens to
+ * the place associated
+ * 
  * @author Claeys
  * 
  */
 public class EdgeIn extends Edge {
 
-	/** IN edge creation from linked place and weight
+	/**
+	 * IN edge creation from linked place and weight
+	 * 
 	 * @param weight
 	 * @param place
 	 */
 	public EdgeIn(int weight, Place place) {
-		super(weight,place);
+		super(weight, place);
 	}
 
 	/**
@@ -21,6 +24,6 @@ public class EdgeIn extends Edge {
 	 */
 	@Override
 	public void trigger() {
-		super.place.add(super.weight);		
+		super.place.add(super.weight);
 	}
 }

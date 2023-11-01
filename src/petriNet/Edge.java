@@ -1,18 +1,20 @@
 package petriNet;
 
-
-/** This is an abstract Class to describe the theoretical shape of an edge : a weight and a place associated 
- * a trigger method and some getters 
+/**
+ * This is an abstract Class to describe the theoretical shape of an edge : a
+ * weight and a place associated a trigger method and some getters
+ * 
  * @author Claeys
  */
 public abstract class Edge {
 	protected int weight;
 	protected Place place;
-	
-		
-	/** Building an edge linked to a place
+
+	/**
+	 * Building an edge linked to a place
+	 * 
 	 * @param weight
-	 * @param place Place to link
+	 * @param place  Place to link
 	 */
 	public Edge(int weight, Place place) {
 		this.weight = weight;
@@ -20,24 +22,25 @@ public abstract class Edge {
 	}
 
 	/**
-	 * Triggers the edge when a transition wants it 
-	 * @throws TransitionNotTriggerableException if the edge is trigger whereas it is not triggerable
+	 * Triggers the edge when a transition wants it
+	 * 
+	 * @throws TransitionNotTriggerableException if the edge is trigger whereas it
+	 *                                           is not triggerable
 	 */
 	abstract void trigger() throws TransitionNotTriggerableException;
-	
 
 	/**
 	 * Return the associated place
+	 * 
 	 * @return Place
 	 */
 	public Place getPlace() {
 		return this.place;
 	};
-	
-	
-	
+
 	/**
 	 * Return the weight of the edge
+	 * 
 	 * @return weight
 	 */
 	public int getWeight() {
