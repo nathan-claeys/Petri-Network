@@ -22,7 +22,7 @@ public class EdgeZero extends EdgeOut {
 	 * empty
 	 */
 	public boolean isTriggerable() {
-		return super.getPlace().isEmpty();
+		return this.getPlace().isEmpty();
 	}
 
 	/**

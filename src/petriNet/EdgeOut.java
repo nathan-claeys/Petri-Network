@@ -25,7 +25,7 @@ public class EdgeOut extends Edge {
 	 * @return is edge triggerable
 	 */
 	public boolean isTriggerable() {
-		return (super.place.getCountTokens() >= super.weight);
+		return (this.getPlace().getCountTokens() >= this.getWeight());
 	}
 
 	/**
@@ -37,9 +37,9 @@ public class EdgeOut extends Edge {
 	@Override
 	public void trigger() throws TransitionNotTriggerableException {
 		if (!this.isTriggerable()) {
-			throw new TransitionNotTriggerableException(super.weight, super.place.getCountTokens());
+			throw new TransitionNotTriggerableException(this.getWeight(), this.getPlace().getCountTokens());
 		}
-		super.place.remove(super.weight);
+		this.getPlace().remove(this.getWeight());
 
 	}
 

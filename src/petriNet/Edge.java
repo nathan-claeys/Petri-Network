@@ -1,5 +1,7 @@
 package petriNet;
 
+import java.security.InvalidParameterException;
+
 /**
  * This is an abstract Class to describe the theoretical shape of an edge : a
  * weight and a place associated a trigger method and some getters
@@ -17,6 +19,9 @@ public abstract class Edge {
 	 * @param place  Place to link
 	 */
 	public Edge(int weight, Place place) {
+		if (weight < 0) {
+			throw new InvalidParameterException("Edge weight must be positive");
+		}
 		this.weight = weight;
 		this.place = place;
 	}

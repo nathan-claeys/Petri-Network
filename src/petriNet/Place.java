@@ -19,7 +19,10 @@ public class Place {
 	 *                    negative)
 	 */
 	public Place(int countTokens) {
-		this.countTokens = Math.abs(countTokens);
+		if (countTokens < 0) {
+			throw new InvalidParameterException("Token count cannot be negative.");
+		}
+		this.countTokens = countTokens;
 	}
 
 	/**
@@ -60,7 +63,7 @@ public class Place {
 	 */
 	public void remove(int count) {
 		if (count <= 0 || count > this.countTokens) {
-			throw new InvalidParameterException();
+			throw new InvalidParameterException("Cannot remove" + count + "tokens from place.");
 		} else {
 			this.countTokens -= count;
 		}

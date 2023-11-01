@@ -24,6 +24,6 @@ public class EdgeIn extends Edge {
 	 */
 	@Override
 	public void trigger() {
-		super.place.add(super.weight);
+		this.getPlace().add(this.getWeight());
 	}
 }

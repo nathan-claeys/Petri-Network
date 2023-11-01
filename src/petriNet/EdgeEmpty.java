@@ -24,14 +24,14 @@ public class EdgeEmpty extends EdgeOut {
 	 * empty
 	 */
 	public boolean isTriggerable() {
-		return (!super.getPlace().isEmpty());
+		return (!this.getPlace().isEmpty());
 	}
 
 	/**
 	 * Triggers the edge. Removes all tokens from the place
 	 */
 	public void trigger() {
-		super.getPlace().remove(super.getPlace().getCountTokens());
+		this.getPlace().remove(this.getPlace().getCountTokens());
 	}
 
 }
