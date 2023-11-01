@@ -1,5 +1,5 @@
 package test;
 
 /**
-*A package to do tests 
-**/
+ * A package to test and coverage the Petri network sources
+ **/

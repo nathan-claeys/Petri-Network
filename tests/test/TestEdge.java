@@ -13,6 +13,7 @@ import petriNet.EdgeOut;
 import petriNet.EdgeType;
 import petriNet.EdgeZero;
 import petriNet.Place;
+import petriNet.TransitionNotTriggerableException;
 
 public class TestEdge {
 	
@@ -61,7 +62,7 @@ public class TestEdge {
         assertEquals(1,place.getCountTokens());
         Place place2 = new Place(1);
         EdgeOut edge2 = new EdgeOut(2,place2);
-        assertThrows(ExceptionInInitializerError.class,()->edge2.trigger());
+        assertThrows(TransitionNotTriggerableException.class,()->edge2.trigger());
     }
 
     @Test
