@@ -15,7 +15,7 @@ public interface PetriNetwork {
 	 * @param transition Transition to trigger
 	 * @throws TransitionNotTriggerableException
 	 */
-	public void triggerTransition(Transition transition) throws TransitionNotTriggerableException;
+	public void triggerTransition(Transition transition);
 
 	/**
 	 * Add a place to the network

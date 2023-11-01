@@ -35,7 +35,7 @@ public class Transition {
 	 * @throws TransitionNotTriggerableException
 	 * 
 	 */
-	public void fire() throws TransitionNotTriggerableException {
+	public void fire() {
 		boolean triggerable = true;
 		for (Edge edge : this.edges) {
 			if (edge instanceof EdgeOut) {
