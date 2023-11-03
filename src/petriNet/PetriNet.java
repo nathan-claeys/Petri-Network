@@ -1,5 +1,6 @@
 package petriNet;
 
+import java.security.InvalidParameterException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -64,6 +65,9 @@ public class PetriNet implements PetriNetwork {
 		case EMPTY:
 			edge = new EdgeEmpty(place);
 			break;
+		
+		default:
+			throw new InvalidParameterException("Edge type must be IN, OUT, ZERO or EMPTY");
 		}
 
 		transition.addEdge(edge);
