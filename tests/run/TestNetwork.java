@@ -1,4 +1,4 @@
-package test;
+package run;
 
 import petriNet.EdgeType;
 import petriNet.PetriNet;
