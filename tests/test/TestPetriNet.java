@@ -68,7 +68,7 @@ public class TestPetriNet {
 		result += String.format("Place %d : %d cailloux\n", 1, 1);
 		result += "=====================\nEtat des arcs :\n";
 		result += String.format("  Arcs de la transition %d\n", 1);
-		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1, 0, edge.getClass().getName(), 1);
+		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1, 1, edge.getClass().getName(), 1);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
 		assertEquals(petriNet.toString(),result);
 	}
@@ -86,7 +86,7 @@ public class TestPetriNet {
 		result += String.format("Place %d : %d cailloux\n", 1, 1);
 		result += "=====================\nEtat des arcs :\n";
 		result += String.format("  Arcs de la transition %d\n", 1);
-		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1, 0, edge.getClass().getName(), 1);
+		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1, 1, edge.getClass().getName(), 1);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
 		assertEquals(petriNet.toString(),result);
 	}
