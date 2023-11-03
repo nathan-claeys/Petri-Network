@@ -10,6 +10,9 @@ import java.util.List;
  *
  */
 public class Transition {
+	/**
+	 * List of all edges linked to the transition
+	 */
 	private List<Edge> edges;
 
 	/**

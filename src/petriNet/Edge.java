@@ -9,8 +9,17 @@ import java.security.InvalidParameterException;
  * @author Claeys
  */
 public abstract class Edge {
-	protected int weight;
-	protected Place place;
+	/**
+	 * Weight of the edge. Represent the quantity of tokens to add/remove to/from
+	 * place.
+	 */
+	
+	private int weight;
+	/**
+	 * Linked place of the edge. The edge can point to the place, or point out of
+	 * the place.
+	 */
+	private Place place;
 
 	/**
 	 * Building an edge linked to a place
@@ -25,11 +34,11 @@ public abstract class Edge {
 		this.weight = weight;
 		this.place = place;
 	}
-	
+
 	/**
 	 * Building an edge linked to a place. Weight is 1 by default.
 	 * 
-	 * @param place  Place to link
+	 * @param place Place to link
 	 */
 	public Edge(Place place) {
 		this(1, place);

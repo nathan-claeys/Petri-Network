@@ -10,6 +10,9 @@ import java.security.InvalidParameterException;
  */
 public class Place {
 
+	/**
+	 * Number of tokens of the place
+	 */
 	private int countTokens;
 
 	/**

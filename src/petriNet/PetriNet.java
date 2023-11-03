@@ -11,7 +11,15 @@ import java.util.List;
  */
 public class PetriNet implements PetriNetwork {
 
+	/**
+	 * List containing all transitions of the network.
+	 */
 	private List<Transition> listTransitions;
+
+	/**
+	 * List containing all the places of the network, whenever or not it is linked
+	 * to a transition.
+	 */
 	private List<Place> listPlaces;
 
 	public PetriNet() {
