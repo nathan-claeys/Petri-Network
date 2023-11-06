@@ -29,7 +29,7 @@ public class TestPetriNet {
 		Transition transition = new Transition();
 		petriNet.add(place);
 		petriNet.add(transition);
-		assertThrows(InvalidParameterException.class,()->petriNet.add(place, transition, 1,null));
+		assertThrows(NullPointerException.class,()->petriNet.add(place, transition, 1,null));
 	}
 	
 	@Test
