@@ -64,7 +64,7 @@ public class Transition {
 		if (!this.hasEdge(edge)) {
 			this.edges.add(edge);
 		} else {
-			throw new IllegalArgumentException("Edge already exists");
+			throw new IllegalArgumentException("An edge with that type already exists between this place and transition");
 		}
 	}
 
