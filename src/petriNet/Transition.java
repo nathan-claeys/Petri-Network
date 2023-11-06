@@ -1,5 +1,6 @@
 package petriNet;
 
+import java.security.InvalidParameterException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -64,7 +65,7 @@ public class Transition {
 		if (!this.hasEdge(edge)) {
 			this.edges.add(edge);
 		} else {
-			throw new IllegalArgumentException("Edge already exists");
+			throw new InvalidParameterException("Edge already exists");
 		}
 	}
 
