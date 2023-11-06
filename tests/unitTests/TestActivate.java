@@ -326,7 +326,7 @@ public class TestActivate {
 		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1,
 						1, edgeOut1.getClass().getName(), 1);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 2,
-						1, edgeIn.getClass().getName(), 2);
+						1, edgeOut2.getClass().getName(), 2);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 3,
 						1, edgeIn.getClass().getName(), 3);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
@@ -366,7 +366,7 @@ public class TestActivate {
 		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1,
 						1, edgeOut1.getClass().getName(), 1);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 2,
-						1, edgeIn.getClass().getName(), 2);
+						1, edgeOut2.getClass().getName(), 2);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 3,
 						1, edgeIn.getClass().getName(), 3);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
@@ -406,7 +406,7 @@ public class TestActivate {
 		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1,
 						4, edgeOut1.getClass().getName(), 1);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 2,
-						2, edgeIn.getClass().getName(), 2);
+						2, edgeOut2.getClass().getName(), 2);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 3,
 						3, edgeIn.getClass().getName(), 3);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
@@ -446,7 +446,7 @@ public class TestActivate {
 		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1,
 						4, edgeOut1.getClass().getName(), 1);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 2,
-						2, edgeIn.getClass().getName(), 2);
+						2, edgeOut2.getClass().getName(), 2);
         result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 3,
 						3, edgeIn.getClass().getName(), 3);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
