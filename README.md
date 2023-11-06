@@ -1,11 +1,15 @@
 # Petri-Network
 
+## Description
+Ce projet vise a créer une simulation de réseau de Pétri. Il implémente les éléments atomiques constitutifs de cette structure : des transitions, des places (avec un certain nombre de jetons), et 4 types d'arcs différents, faisant le lien entre les transitions et les places. Il existe deux arcs basiques : entrant et sortant (d'une place), et deux arcs sortants particuliers (arc zéro et arc videur).
+De plus, une implémentation de l'interface du réseau est proposée afin de pouvoir mener des tests et exécuter des simulation.
+
 ## Environnement
 Version d'Eclipse : 2022-06
 Java Runtime Environment 11
 
 ## Exécution
-Quelques exmples de réseaux de Petri sont disponibles dans le package `run` du répertoire `tests`.
+Quelques exmeples de réseaux de Petri sont disponibles dans le package `run` du répertoire `tests`.
 Les méthodes de création et utilisation du réseau sont données par l'interface `PetriNetwork` (`src/petriNet.PetriNetwork`).
 
 ## Tests
