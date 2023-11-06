@@ -98,7 +98,7 @@ public class TestTransition {
 		LinkedList<Edge> list= new LinkedList<Edge>();
 		list.add(edge1);
 		Transition transition = new Transition(list);
-		assertThrows(InvalidParameterException.class,()->transition.addEdge(edge1));
+		assertThrows(InvalidParameterException.class,()->transition.addEdge(edge1));//CAD0
 		assertEquals(transition.getEdges(),list);
 		//same for edgeOut
 		Place place2 = new Place(2);
@@ -106,11 +106,11 @@ public class TestTransition {
 		LinkedList<Edge> list2= new LinkedList<Edge>();
 		list2.add(edge2);
 		Transition transition2 = new Transition(list2);
-		assertThrows(InvalidParameterException.class,()->transition2.addEdge(edge2));
+		assertThrows(InvalidParameterException.class,()->transition2.addEdge(edge2));//CAD1
 	}
 
 	@Test
-	void testAddingMoreThanTwoEdgesToASinglePlace (){
+	void testAddingMoreThanTwoEdgesToASinglePlaceCaseEdgeOut (){
 		Place place1 = new Place(2);
 		EdgeIn edge1 = new EdgeIn(3,place1);
 		EdgeOut edge2 = new EdgeOut(3,place1);
@@ -118,8 +118,47 @@ public class TestTransition {
 		list.add(edge1);
 		list.add(edge2);
 		Transition transition = new Transition(list);
-		EdgeZero edge3 = new EdgeZero(place1);
-		assertThrows(InvalidParameterException.class,()->transition.addEdge(edge3));
+		EdgeOut edge3 = new EdgeOut(place1);
+		assertThrows(InvalidParameterException.class,()->transition.addEdge(edge3));//CAD5
+	}
+
+	@Test 
+	void testAddingMoreThanTwoEdgesToASinglePlaceCaseEdgeIn (){
+		Place place1 = new Place(2);
+		EdgeIn edge1 = new EdgeIn(3,place1);
+		EdgeOut edge2 = new EdgeOut(3,place1);
+		LinkedList<Edge> list= new LinkedList<Edge>();
+		list.add(edge1);
+		list.add(edge2);
+		Transition transition = new Transition(list);
+		EdgeIn edge3 = new EdgeIn(place1);
+		assertThrows(InvalidParameterException.class,()->transition.addEdge(edge3));//CAD4
+	}
+
+	@Test
+	void testAddingEdgeOutWhenThereIsAnEdgeIn (){
+		Place place1 = new Place(2);
+		EdgeIn edge1 = new EdgeIn(3,place1);
+		LinkedList<Edge> list= new LinkedList<Edge>();
+		list.add(edge1);
+		Transition transition = new Transition(list);
+		EdgeOut edge2 = new EdgeOut(3,place1);
+		transition.addEdge(edge2);
+		list.add(edge2);
+		assertEquals(list,transition.getEdges());//CAD3
+	}
+
+	@Test 
+	void testAddingEdgeInWhenThereIsAnEdgeOut () {
+		Place place1 = new Place(2);
+		EdgeOut edge1 = new EdgeOut(3,place1);
+		LinkedList<Edge> list= new LinkedList<Edge>();
+		list.add(edge1);
+		Transition transition = new Transition(list);
+		EdgeIn edge2 = new EdgeIn(3,place1);
+		transition.addEdge(edge2);
+		list.add(edge2);
+		assertEquals(list,transition.getEdges());//CAD2
 	}
 
 }
