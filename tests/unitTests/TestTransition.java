@@ -114,10 +114,9 @@ public class TestTransition {
 		Place place1 = new Place(2);
 		EdgeIn edge1 = new EdgeIn(3,place1);
 		EdgeOut edge2 = new EdgeOut(3,place1);
-		LinkedList<Edge> list= new LinkedList<Edge>();
-		list.add(edge1);
-		list.add(edge2);
-		Transition transition = new Transition(list);
+		Transition transition = new Transition();
+		transition.addEdge(edge1);
+		transition.addEdge(edge2);
 		EdgeOut edge3 = new EdgeOut(place1);
 		assertThrows(InvalidParameterException.class,()->transition.addEdge(edge3));//CAD5
 	}
