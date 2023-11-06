@@ -97,12 +97,13 @@ public class Transition {
 	 *         otherwise
 	 */
 	private boolean hasEdge(Edge edge) {
+		boolean res = false;
 		for (Edge e : this.edges) {
 			if (e.getPlace() == edge.getPlace()) {
 				if (e instanceof EdgeIn) {
-					return edge instanceof EdgeIn;
+					res |= edge instanceof EdgeIn;
 				} else {
-					return edge instanceof EdgeOut;
+					res |= edge instanceof EdgeOut;
 				}
 			}
 		}
