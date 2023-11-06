@@ -314,7 +314,7 @@ public class TestActivate {
         EdgeOut edgeOut2 = (EdgeOut) transition.getEdges().get(1);
         String result = String.format(
 				"RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n",
-				1, 2);
+				1, 3);
 		result += String.format("Place %d : %d cailloux\n", 1, 1);
         result += String.format("Place %d : %d cailloux\n", 2, 0);
         result += String.format("Place %d : %d cailloux\n", 3, 1);
@@ -354,7 +354,7 @@ public class TestActivate {
         EdgeOut edgeOut2 = (EdgeOut) transition.getEdges().get(1);
         String result = String.format(
 				"RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n",
-				1, 2);
+				1, 3);
 		result += String.format("Place %d : %d cailloux\n", 1, 0);
         result += String.format("Place %d : %d cailloux\n", 2, 1);
         result += String.format("Place %d : %d cailloux\n", 3, 2);
@@ -388,13 +388,13 @@ public class TestActivate {
         petriNet.add(place3);
         petriNet.add(place1, transition, 4, EdgeType.OUT);
         petriNet.add(place2, transition, 2, EdgeType.OUT);
-        petriNet.add(place3, transition, 1, EdgeType.IN);
+        petriNet.add(place3, transition, 3, EdgeType.IN);
         EdgeIn edgeIn = (EdgeIn) transition.getEdges().get(2);
         EdgeOut edgeOut1 = (EdgeOut) transition.getEdges().get(0);
         EdgeOut edgeOut2 = (EdgeOut) transition.getEdges().get(1);
         String result = String.format(
 				"RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n",
-				1, 2);
+				1, 3);
 		result += String.format("Place %d : %d cailloux\n", 1, 2);
         result += String.format("Place %d : %d cailloux\n", 2, 4);
         result += String.format("Place %d : %d cailloux\n", 3, 2);
@@ -434,7 +434,7 @@ public class TestActivate {
         EdgeOut edgeOut2 = (EdgeOut) transition.getEdges().get(1);
         String result = String.format(
 				"RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n",
-				1, 2);
+				1, 3);
 		result += String.format("Place %d : %d cailloux\n", 1, 0);
         result += String.format("Place %d : %d cailloux\n", 2, 1);
         result += String.format("Place %d : %d cailloux\n", 3, 5);
