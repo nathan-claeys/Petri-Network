@@ -25,7 +25,7 @@ public class TestEdge {
 		Place place = null;
 		EdgeIn edge = new EdgeIn(3,place);
 		Place p2 = edge.getPlace();
-		assertEquals(p2,place);
+		assertEquals(p2,place);//CAA1
 	}
 	
 	@Test
@@ -33,15 +33,15 @@ public class TestEdge {
 		Place place = null;
 		EdgeIn edge = new EdgeIn(3,place);
 		int w = edge.getWeight();
-		assertEquals(w,3);	
+		assertEquals(w,3);	//CAA1
 	}
 
 	@Test
 	public void testConstructor(){
 		Place place = new Place(3);
-		assertThrows(InvalidParameterException.class,()->new EdgeIn(-1,place));
+		assertThrows(InvalidParameterException.class,()->new EdgeIn(-1,place));//CAA0
 		EdgeIn edge = new EdgeIn(place);
-		assertEquals(1,edge.getWeight());
+		assertEquals(1,edge.getWeight());//CAA2
 		
 	}
 	

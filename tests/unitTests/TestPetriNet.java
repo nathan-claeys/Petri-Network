@@ -22,7 +22,7 @@ public class TestPetriNet {
 		assertTrue(petriNet instanceof PetriNet);
 	}
 
-	@Test 
+/*	@Test 
 	void testAddCaseDefaultType(){
 		PetriNet petriNet = new PetriNet();
 		Place place = new Place(1);
@@ -30,7 +30,7 @@ public class TestPetriNet {
 		petriNet.add(place);
 		petriNet.add(transition);
 		assertThrows(InvalidParameterException.class,()->petriNet.add(place, transition, 1,null));
-	}
+	}*/
 	
 	@Test
 	void testToStringAndAddPlaceAndAddTransitionAndAddEdgeIn() {

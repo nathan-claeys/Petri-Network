@@ -33,20 +33,20 @@ public class TestPlace {
 		assertFalse(place1.isEmpty());
 	}
 	
-	@Test
+	@Test 
 	void testAddTokens() {
 		Place place = new Place(0);
 		place.add(2);
-		assertEquals(2,place.getCountTokens());
-		assertThrows(InvalidParameterException.class,()->{place.add(-2);});
+		assertEquals(2,place.getCountTokens());//CAJ0
+		assertThrows(InvalidParameterException.class,()->{place.add(-2);}); //CAJ1
 	}
 
 	@Test
 	void testRemoveTokens(){
 		Place place = new Place(3);
 		place.remove(2);
-		assertEquals(1,place.getCountTokens());
-		assertThrows(InvalidParameterException.class,()->{place.remove(-2);});
-		assertThrows(InvalidParameterException.class,()->{place.remove(4);});
+		assertEquals(1,place.getCountTokens());//CEJ2
+		assertThrows(InvalidParameterException.class,()->{place.remove(-2);});//CEJ0
+		assertThrows(InvalidParameterException.class,()->{place.remove(4);});//CEJ1
 }
 }

@@ -56,12 +56,17 @@ public class Transition {
 	}
 
 	/**
-	 * Add an edge to the transition
+	 * Add an edge to the transition only if it does not already exist
 	 * 
 	 * @param edge Edge to link to transition
 	 */
 	public void addEdge(Edge edge) {
-		this.edges.add(edge);
+		if (!this.hasEdge(edge)) {
+			this.edges.add(edge);
+		}
+		else {
+			throw new IllegalArgumentException("Edge already exists");
+		}
 	}
 
 	/**
@@ -83,4 +88,18 @@ public class Transition {
 		return edges;
 	}
 
+	/**
+	 * Tells if an edge of the same type (in or out) already exists to the same place
+	 * 
+	 * @param edge edge to check
+	 * @return True if an edge of the same type (in or out) already exists, false otherwise
+	 */
+	private boolean hasEdge(Edge edge){
+		for (Edge e : this.edges){
+			if (e.getPlace() == edge.getPlace()){
+				if (e instanceof EdgeIn) {return edge instanceof EdgeOut;}
+				else {return edge instanceof EdgeIn;}
+			}
+		}
+		return false;	}
 }
