@@ -102,4 +102,18 @@ public class TestActivate {
         assertEquals(result,petriNet.toString());
     }
 
+    //RD3
+    @Test
+    void testActivateTransitionWithOnePlaceWith2tokenAndAnEdgeOutOfWeight3 (){
+        Transition transition = new Transition();
+        PetriNet petriNet = new PetriNet();
+        Place place = new Place(2);
+        petriNet.add(transition);
+        petriNet.add(place);
+        petriNet.add(place, transition, 3, EdgeType.OUT);
+        String result = petriNet.toString();
+        petriNet.triggerTransition(transition);
+        assertEquals(result,petriNet.toString());
+    }
+
 }
