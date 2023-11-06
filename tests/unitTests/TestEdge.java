@@ -44,6 +44,15 @@ public class TestEdge {
 		assertEquals(1,edge.getWeight());//CAA2
 		
 	}
+
+	@Test 
+	void testSetWeight (){
+		Place place = new Place(3);
+		EdgeIn edge = new EdgeIn(place);
+		edge.setWeight(2);
+		assertEquals(2,edge.getWeight());
+		assertThrows(InvalidParameterException.class,()->edge.setWeight(-1));
+	}
 	
 	@Test
 	public void testIsTriggerable() {
