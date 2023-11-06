@@ -293,4 +293,44 @@ public class TestActivate {
         petriNet.triggerTransition(transition);
         assertEquals(result,petriNet.toString());
     }
+
+    //RMM0
+    @Test
+    void testActivateTransitionWith2EdgeOutAnd1EdgeInAnd3PlaceWith1And0And1Tokens (){
+        Transition transition = new Transition();
+        PetriNet petriNet = new PetriNet();
+        Place place1 = new Place(1);
+        Place place2 = new Place(0);
+        Place place3 = new Place(1);
+        petriNet.add(transition);
+        petriNet.add(place1);
+        petriNet.add(place2);
+        petriNet.add(place3);
+        petriNet.add(place1, transition, 1, EdgeType.OUT);
+        petriNet.add(place2, transition, 1, EdgeType.OUT);
+        petriNet.add(place3, transition, 1, EdgeType.IN);
+        EdgeIn edgeIn = (EdgeIn) transition.getEdges().get(2);
+        EdgeOut edgeOut1 = (EdgeOut) transition.getEdges().get(0);
+        EdgeOut edgeOut2 = (EdgeOut) transition.getEdges().get(1);
+        String result = String.format(
+				"RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n",
+				1, 2);
+		result += String.format("Place %d : %d cailloux\n", 1, 1);
+        result += String.format("Place %d : %d cailloux\n", 2, 0);
+        result += String.format("Place %d : %d cailloux\n", 3, 1);
+		result += "=====================\nEtat des arcs :\n";
+		// Transitions information
+		result += String.format("  Arcs de la transition %d\n", 1);
+
+
+		result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 1,
+						1, edgeOut1.getClass().getName(), 1);
+        result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 2,
+						1, edgeIn.getClass().getName(), 2);
+        result += String.format("    Arc %d - Poids : %d , Type : %s, Cible : Place %d\n", 3,
+						1, edgeIn.getClass().getName(), 3);
+		result += "FIN DU RAPPORT\n----------------------------------------------\n";
+        petriNet.triggerTransition(transition);
+        assertEquals(result,petriNet.toString());
+    }
 }
