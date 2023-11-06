@@ -65,7 +65,7 @@ public class Transition {
 		if (!this.hasEdge(edge)) {
 			this.edges.add(edge);
 		} else {
-			throw new InvalidParameterException("Edge already exists");
+			throw new InvalidParameterException("An edge with that type already exists between this place and transition");
 		}
 	}
 
