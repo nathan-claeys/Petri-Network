@@ -5,6 +5,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
+import java.security.InvalidParameterException;
+
 import org.junit.jupiter.api.Test;
 
 import petriNet.EdgeEmpty;
@@ -32,6 +34,15 @@ public class TestEdge {
 		EdgeIn edge = new EdgeIn(3,place);
 		int w = edge.getWeight();
 		assertEquals(w,3);	
+	}
+
+	@Test
+	public void testConstructor(){
+		Place place = new Place(3);
+		assertThrows(InvalidParameterException.class,()->new EdgeIn(-1,place));
+		EdgeIn edge = new EdgeIn(place);
+		assertEquals(1,edge.getWeight());
+		
 	}
 	
 	@Test

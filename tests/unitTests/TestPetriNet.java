@@ -1,7 +1,10 @@
 package unitTests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+
+import java.security.InvalidParameterException;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +20,16 @@ public class TestPetriNet {
 	void testConstructor() {
 		PetriNet petriNet = new PetriNet();
 		assertTrue(petriNet instanceof PetriNet);
+	}
+
+	@Test 
+	void testAddCaseDefaultType(){
+		PetriNet petriNet = new PetriNet();
+		Place place = new Place(1);
+		Transition transition = new Transition();
+		petriNet.add(place);
+		petriNet.add(transition);
+		assertThrows(InvalidParameterException.class,()->petriNet.add(place, transition, 1,null));
 	}
 	
 	@Test

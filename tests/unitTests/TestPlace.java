@@ -15,6 +15,8 @@ public class TestPlace {
 	@Test
 	void testConstructor() {
 		assertThrows(InvalidParameterException.class, () -> {new Place(-1);});
+		Place place = new Place(2);
+		assertEquals(2,place.getCountTokens());
 	}
 	
 	@Test
