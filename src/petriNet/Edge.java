@@ -36,15 +36,6 @@ public abstract class Edge {
 	}
 
 	/**
-	 * Building an edge linked to a place. Weight is 1 by default.
-	 * 
-	 * @param place Place to link
-	 */
-	public Edge(Place place) {
-		this(1, place);
-	}
-
-	/**
 	 * Triggers the edge
 	 * 
 	 * @throws TransitionNotTriggerableException if the edge is trigger whereas it

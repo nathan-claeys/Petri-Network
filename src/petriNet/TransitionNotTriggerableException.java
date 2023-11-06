@@ -8,8 +8,9 @@ package petriNet;
  * @author Cheucle
  *
  */
-@SuppressWarnings("serial")
 public class TransitionNotTriggerableException extends RuntimeException {
+
+	private static final long serialVersionUID = -548610143447987471L;
 
 	public TransitionNotTriggerableException(int edgeWeight, int placeTokens) {
 		super("Not enought tokens in place to trigger edge. Place's tokens : " + placeTokens + ". Edge weight : "
