@@ -24,8 +24,8 @@ public abstract class Edge {
 	/**
 	 * Building an edge linked to a place
 	 * 
-	 * @param weight
-	 * @param place  Place to link
+	 * @param weight Weight of the edge (must be strictly positive)
+	 * @param place Place to link
 	 */
 	public Edge(int weight, Place place) {
 		if (weight <= 0) {
@@ -46,7 +46,7 @@ public abstract class Edge {
 	/**
 	 * Return the associated place
 	 * 
-	 * @return Place
+	 * @return Place The associated place
 	 */
 	public Place getPlace() {
 		return this.place;
@@ -55,10 +55,20 @@ public abstract class Edge {
 	/**
 	 * Return the weight of the edge
 	 * 
-	 * @return weight
+	 * @return weight Weight of the edge
 	 */
 	public int getWeight() {
 		return this.weight;
+	}
+	
+	/** Change the edge's value (weight)
+	 * @param weight New weight of the edge (must be strictly positive)
+	 */
+	public void setWeight(int weight) {
+		if (weight <= 0) {
+			throw new InvalidParameterException("Edge weight must be positive");
+		}
+		this.weight = weight;		
 	}
 
 }
