@@ -22,20 +22,15 @@ public class TestPetriNet {
 		assertTrue(petriNet instanceof PetriNet);
 	}
 
-/*	@Test 
+	@Test 
 	void testAddCaseDefaultType(){
 		PetriNet petriNet = new PetriNet();
 		Place place = new Place(1);
 		Transition transition = new Transition();
 		petriNet.add(place);
 		petriNet.add(transition);
-<<<<<<< HEAD
-		assertThrows(InvalidParameterException.class,()->petriNet.add(place, transition, 1,null));
-	}*/
-=======
 		assertThrows(NullPointerException.class,()->petriNet.add(place, transition, 1,null));
 	}
->>>>>>> branch 'main' of https://github.com/nathan-claeys/Petri-Network.git
 	
 	@Test
 	void testToStringAndAddPlaceAndAddTransitionAndAddEdgeIn() {
