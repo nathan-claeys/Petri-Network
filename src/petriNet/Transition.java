@@ -107,6 +107,6 @@ public class Transition {
 				}
 			}
 		}
-		return false;
+		return res;
 	}
 }
