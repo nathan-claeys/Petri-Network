@@ -1,4 +1,5 @@
 # Petri-Network
+Par Nathan Claeys et Antoine Cheucle
 
 ## Description
 Ce projet vise a créer une simulation de réseau de Pétri. Il implémente les éléments atomiques constitutifs de cette structure : des transitions, des places (avec un certain nombre de jetons), et 4 types d'arcs différents, faisant le lien entre les transitions et les places. Il existe deux arcs basiques : entrant et sortant (d'une place), et deux arcs sortants particuliers (arc zéro et arc videur).
@@ -27,3 +28,12 @@ La classe `PetriNet` ne stocke pas la liste des arcs comme prévu initialement. 
 
 ### Ajout de constructeurs enchaînés
 Le sujet indique que les arcs ont par défaut un poids de 1. Nous avons ajouté un nouveau constructeur ne prenant pas de poids en entrée, permettant d'implémenter ce poids par défaut.
+
+### Ajout d'une erreur personnalisée
+Nous avons défini une erreur personnalisée `TransitionNotTriggerableException` pour prévenir du tirage d'une transition qui n'est pas tirable.
+
+### Ajout d'une méthode pour modifier le poids d'un arc
+Après relecture de l'énoncé, l'utilisateur doit pouvoir modifier la valeur (le poids) d'un arc. Nous avons donc ajouter une méthode `setWeight` pour les arcs.
+
+### Ajout d'une méthode pour vérifier l'existance d'un arc
+Nous devons prévenir l'ajout d'un arc qui existe déjà. Nous avons ajouté une fonction privée intermédiaire dans la classe `Edge` pour vérifier si un type d'arc existe déjà entre une place et une transition.
