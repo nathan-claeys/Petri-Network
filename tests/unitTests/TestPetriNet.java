@@ -148,9 +148,9 @@ public class TestPetriNet {
 		petriNet.add(place);
 		petriNet.add(transition);
 		petriNet.add(place, transition, 1, EdgeType.IN);
-		petriNet.remove(place, transition);
 		petriNet.remove(transition);
 		petriNet.remove(place);
+		// The edge is automatically removed
 		String result = String.format("RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", 0, 0);
 		result += "=====================\nEtat des arcs :\n";
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
