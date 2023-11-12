@@ -141,7 +141,7 @@ public class TestPetriNet {
 	}
 	
 	@Test
-	void testRemoves() {
+	void testRemovesPlaceAndTransition() {
 		PetriNet petriNet = new PetriNet();
 		Place place = new Place(1);
 		Transition transition = new Transition();
@@ -153,6 +153,23 @@ public class TestPetriNet {
 		petriNet.remove(place);
 		String result = String.format("RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", 0, 0);
 		result += "=====================\nEtat des arcs :\n";
+		result += "FIN DU RAPPORT\n----------------------------------------------\n";
+		assertEquals(petriNet.toString(),result);
+	}
+
+	@Test
+	void testRemoveEdge() {
+		PetriNet petriNet = new PetriNet();
+		Place place = new Place(1);
+		Transition transition = new Transition();
+		petriNet.add(place);
+		petriNet.add(transition);
+		petriNet.add(place, transition, 1, EdgeType.IN);
+		petriNet.remove(place,transition);
+		String result = String.format("RAPPORT DE L'ETAT DU RESEAU\nNombre de transitions : %d \nNombre de places : %d\n\n=====================\nEtat des places :\n", 1, 1);
+		result += String.format("Place %d : %d cailloux\n", 1, 1);
+		result += "=====================\nEtat des arcs :\n";
+		result += String.format("  Arcs de la transition %d\n", 1);
 		result += "FIN DU RAPPORT\n----------------------------------------------\n";
 		assertEquals(petriNet.toString(),result);
 	}

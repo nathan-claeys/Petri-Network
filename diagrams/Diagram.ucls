@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <interface id="1" language="java" name="petriNet.PetriNetwork" project="Petri-Network" 
     file="/Petri-Network/src/petriNet/PetriNetwork.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="196" width="253" x="530" y="-26"/>    
